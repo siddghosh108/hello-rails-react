@@ -526,3 +526,13 @@ Processing by Api::V1::GreetingsController#index as HTML
 Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 12.3ms | Allocations: 566)
 
 
+Started GET "/" for 127.0.0.1 at 2024-01-22 15:52:02 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (43.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RootsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roots/index.html.erb within layouts/application
+  Rendered roots/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 109.5ms | Allocations: 21662)
+Completed 200 OK in 149ms (Views: 122.3ms | ActiveRecord: 0.0ms | Allocations: 25678)
+
+

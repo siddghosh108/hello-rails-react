@@ -502,3 +502,27 @@ Processing by Api::V1::GreetingsController#index as HTML
 Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 566)
 
 
+Started GET "/" for 127.0.0.1 at 2024-01-22 14:28:13 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (42.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RootsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roots/index.html.erb within layouts/application
+  Rendered roots/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 199.5ms | Allocations: 21675)
+Completed 200 OK in 253ms (Views: 219.3ms | ActiveRecord: 0.0ms | Allocations: 25706)
+
+
+Started GET "/api/v1/greetings" for ::1 at 2024-01-22 14:28:20 -0800
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (47.5ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:3:in `index'
+Completed 200 OK in 276ms (Views: 0.4ms | ActiveRecord: 132.2ms | Allocations: 17446)
+
+
+Started GET "/api/v1/greetings" for ::1 at 2024-01-22 14:28:34 -0800
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (12.3ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:3:in `index'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 12.3ms | Allocations: 566)
+
+

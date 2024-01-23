@@ -36,3 +36,29 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore the default Rails generated files
+/bin/*
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/log/*
+/tmp/*
+/vendor/bundle/
+/public/system/*
+/public/uploads/*
+
+# Ignore the custom environment files
+/.env*
+
+# Ignore .DS_Store and other system-generated files
+.DS_Store
+Thumbs.db
+
+# Ignore application configuration files
+/config/application.yml
+
+# Ignore test coverage directory
+/coverage/
+
+# Ignore any local development files
+/config/environments/development.local.rb

@@ -50,3 +50,15 @@ Style/IfUnlessModifier:
 # URISchemes: http, https
 Layout/LineLength:
   Max: 198
+
+# Load rubocop-capybara extension
+require:
+  - rubocop-capybara
+
+# Load rubocop-rails extension
+require:
+  - rubocop-rails
+
+# Opt out of extension suggestion messages
+AllCops:
+  SuggestExtensions: false

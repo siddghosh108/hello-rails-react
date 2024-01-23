@@ -536,3 +536,20 @@ Processing by RootsController#index as HTML
 Completed 200 OK in 149ms (Views: 122.3ms | ActiveRecord: 0.0ms | Allocations: 25678)
 
 
+Started GET "/" for 127.0.0.1 at 2024-01-22 16:13:22 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RootsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering roots/index.html.erb within layouts/application
+  Rendered roots/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 183)
+  Rendered layout layouts/application.html.erb (Duration: 178.8ms | Allocations: 21395)
+Completed 200 OK in 227ms (Views: 198.3ms | ActiveRecord: 0.0ms | Allocations: 25415)
+
+
+Started GET "/api/v1/greetings" for ::1 at 2024-01-22 16:13:36 -0800
+Processing by Api::V1::GreetingsController#index as HTML
+  [1m[36mGreeting Load (51.9ms)[0m  [1m[34mSELECT "greetings".* FROM "greetings" ORDER BY RANDOM() LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/greetings_controller.rb:8:in `index'
+Completed 200 OK in 255ms (Views: 0.4ms | ActiveRecord: 116.1ms | Allocations: 17443)
+
+

@@ -54,9 +54,6 @@ Layout/LineLength:
 # Load rubocop-capybara extension
 require:
   - rubocop-capybara
-
-# Load rubocop-rails extension
-require:
   - rubocop-rails
 
 # Opt out of extension suggestion messages
